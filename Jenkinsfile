@@ -6,15 +6,16 @@ pipeline{
                 sh 'mvn clean'
             }
         }
-    }
-    stage('Test'){
+        stage('Test'){
         steps {
             sh 'mvn test'
         }
     }
-    stage('Package'){
+     stage('Package'){
         steps{
             sh 'mvn package'
         }
+     }
     }
+    
 }
